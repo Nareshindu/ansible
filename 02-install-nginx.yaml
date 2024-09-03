@@ -7,5 +7,5 @@
        msg: Hello Indu
    - name: install nginx 
      ansible.builtin.package:
-     name: nginx
-     state: installed
+       name: nginx
+       state: installed
