@@ -8,4 +8,4 @@
        state: absent
    - name: hello nresh
      ansible.builtin.debug:
-      - msg: hello indu papa
+       msg: hello indu papa
