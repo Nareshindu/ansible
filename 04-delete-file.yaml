@@ -1,0 +1,8 @@
+- name: delete a file
+  hosts: webservers
+  tasks:
+   - name: delete .txt file
+     ansible.builtin.file:
+       src: /opt/01.naresh.txt
+       state: absent
+       remote_src: yes
