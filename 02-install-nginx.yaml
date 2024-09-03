@@ -1,9 +1,10 @@
 - name: install nginx server
   hosts: webservers
-  become: true
+  become: yes
   tasks:
    - name: install nginx
      ansible.builtin.debug:
        msg: Hello Indu
    - name: install nginx
+     state: present 
      ansible.builtin.package:
