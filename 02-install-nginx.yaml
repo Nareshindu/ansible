@@ -5,7 +5,7 @@
    - name: install nginx
      ansible.builtin.debug:
        msg: Hello Indu
-     name: install nginx 
+   - name: install nginx 
      ansible.builtin.package:
      name: nginx
      state: present
