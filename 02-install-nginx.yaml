@@ -1,5 +1,6 @@
 - name: install nginx server
   hosts: webservers
+  become: true
   tasks:
    - name: install nginx
      ansible.builtin.debug:
