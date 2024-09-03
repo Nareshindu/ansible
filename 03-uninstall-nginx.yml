@@ -2,10 +2,10 @@
   hosts: webservers
   become: yes
   tasks:
-   - name: uninstall nginx
-     ansible.builtin.package:
+   - name: disable nginx
+     ansible.builtin.service:
        name: nginx
-       state: absent
+       disabled: yes
    - name: hello nresh
      ansible.builtin.debug:
        msg: hello indu papa
