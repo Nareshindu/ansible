@@ -4,5 +4,5 @@
   tasks:
    - name: delete file
      ansible.builtin.file:
-       src: /opt/01.naresh.txt
+       path: /opt/01.naresh.txt
        state: absent
