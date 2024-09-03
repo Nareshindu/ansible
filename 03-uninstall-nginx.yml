@@ -11,3 +11,8 @@
    - name: hello nresh
      ansible.builtin.debug:
        msg: hello indu papa
+
+   - name: copy file
+     ansible.builtin.copy:
+       source: /tmp/01.naresh.txt
+       destination: /opt/01.naresh.txt
