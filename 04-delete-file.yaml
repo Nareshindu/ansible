@@ -1,5 +1,6 @@
 - name: delete a file
   hosts: webservers
+  become: true
   tasks:
    - name: delete file
      ansible.builtin.file:
