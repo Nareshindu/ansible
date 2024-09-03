@@ -1,0 +1,7 @@
+- name: uninstall nginx
+  hosts: webservers
+  become: yes
+  - name: uninstall nginx
+    ansible.builtin.package:
+      name: nginx
+      state: stopped
