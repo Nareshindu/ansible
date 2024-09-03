@@ -2,7 +2,7 @@
   hosts: webservers
   become: true
   tasks:
-   - name: delete file
-     ansible.builtin.file:
-       src: /opt/01.naresh.txt
-       state: absent
+- name: Delete file
+  ansible.builtin.file:
+    path: /opt/01.naresh.txt
+    state: absent
