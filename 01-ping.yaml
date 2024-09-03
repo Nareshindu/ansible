@@ -3,14 +3,3 @@
   tasks:
   - name: ping the server
     ansible.builtin.ping:
-
-
-# - name: ping the server
-#   hosts: webservers
-#   become: yes
-#   tasks:
-#    - names: ping the server
-#      ansible.builtin.ping:
-#    - names: install nginx
-#      state: installed
-# 	   ansible.builtin.package:
