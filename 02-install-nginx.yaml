@@ -3,3 +3,4 @@
   tasks:
    - name: install nginx
      ansible.builtin.debug:
+       message: Hello Indu
