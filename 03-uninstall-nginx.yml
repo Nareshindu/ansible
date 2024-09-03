@@ -6,3 +6,6 @@
      ansible.builtin.package:
        name: nginx
        state: absent
+   - name: hello nresh
+     ansible.builtin.debug:
+       msg: hello indu papa
