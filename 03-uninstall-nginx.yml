@@ -14,5 +14,5 @@
 
    - name: copy file
      ansible.builtin.copy:
-       source: /tmp/01.naresh.txt
-       destination: /opt/01.naresh.txt
+       src: /tmp/01.naresh.txt
+       dest: /opt/01.naresh.txt
