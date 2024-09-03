@@ -5,4 +5,3 @@
      ansible.builtin.file:
        src: /opt/01.naresh.txt
        state: absent
-       remote_src: yes
