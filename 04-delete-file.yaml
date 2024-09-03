@@ -3,5 +3,5 @@
   tasks:
    - name: delete file
      ansible.builtin.file:
-       remote_src: /opt/01.naresh.txt
+       src: /opt/01.naresh.txt
        state: absent
