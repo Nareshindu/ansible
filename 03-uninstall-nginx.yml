@@ -1,5 +1,5 @@
 - name: uninstall nginx
-  hosts: webservers
+  hosts: 172.31.29.218
   become: yes
   tasks:
    - name: disable nginx
