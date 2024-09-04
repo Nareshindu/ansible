@@ -14,7 +14,7 @@
     ansible.builtin.debug:
       msg: Hello {{ Name }} I am from {{ village }}
     - name: print the variable from task level
-       ansible.builtin.debug:
+      ansible.builtin.debug:
          msg: Hello {{ NAME }} I am from {{ village }}
       vars:
         NaMe: NN
