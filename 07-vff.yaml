@@ -1,8 +1,7 @@
-- name: print variable from file
-  hosts: webservers
-  vars_file:
-    vars.yaml
+- name: Print the variables from file
+  vars_files:
+    - vars.yaml  # This is where your variables are defined
   tasks:
-   - name: print variable
-     ansible.builtin.debug:
-        msg: Hello {{ NAME }} I am from {{ village }}
+    - name: Print a greeting message
+      ansible.builtin.debug:
+        msg: "Hello {{ NAME }}, I am from {{ village }}"
