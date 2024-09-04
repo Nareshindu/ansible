@@ -4,10 +4,10 @@
     Name: naresh
     village: ramapuram
   tasks:
-  - name: first one
+  - name: first one declared variables
     ansible.builtin.debug:
       msg: Hello {{ Name }} I am from {{ village }}
-  - name: second one
+  - name: second one from file
     ansible.builtin.include_vars:
       file: vars.yaml
   - name: vars from file
@@ -17,6 +17,11 @@
      vars:
        NAME: NARESH
        village: RAMAPURAM
-   - name: print the vars from task level
+  - name: print the vars from task level
      ansible.builtin.debug:
         msg: Hello {{ NAME }} I am from {{ village }}
+   vars_files:
+   - vars.yaml
+   - name: print the variable from file
+     ansible.builtin.debug:
+       msg: Hello {{ NAME }} I am from {{ village }}
