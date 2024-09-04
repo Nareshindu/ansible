@@ -1,3 +1,8 @@
 
 [webservers]
 172.31.80.136
+
+
+[webservers:vars]
+NAME: NaResh naidu
+village: Rmp

@@ -1,14 +1,17 @@
 - name: print the variables
   hosts: webservers
-  vars_files:
-   - vars.yaml
+  # vars_files:
+  #  - vars.yaml
   tasks:
-   - name: print the variable from file
+  #  - name: print the variable from file
+  #    ansible.builtin.debug:
+  #      msg: Hello {{ NAME }} I am from {{ village }}
+  #  - name: print the variables from play level
+  #    ansible.builtin.debug:
+  #      msg: Hello {{ NAME }} I am from {{ village }}
+  #    vars:
+  #     NAME: Naresh
+  #     village: Ramapuram
+   - name: print information from inventory file
      ansible.builtin.debug:
-       msg: Hello {{ NAME }} I am from {{ village }}
-   - name: print the variables from play level
-     ansible.builtin.debug:
-       msg: Hello {{ NAME }} I am from {{ village }}
-     vars:
-      NAME: Naresh
-      village: Ramapuram
+      msg: Hello {{ NAME }} I am from {{ village }}
