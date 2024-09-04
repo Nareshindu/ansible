@@ -14,9 +14,12 @@
        village: RAMAPURAM
      ansible.builtin.debug:
         msg: Hello {{ NAME }} I am from {{ village }}
-   - name: print the variables from file
+   - name: Print the variables from file
      vars_files:
-      - vars.yaml
-     ansible.builtin.debug:
-       msg: Hello {{ NAME }} I am from {{ village }}
+        - vars.yaml  # This is where your variables are defined
+     tasks:
+    - name: Print a greeting message
+      ansible.builtin.debug:
+        msg: "Hello {{ NAME }}, I am from {{ village }}"
+
     
