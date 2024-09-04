@@ -13,9 +13,18 @@
   - name: file
     ansible.builtin.debug:
       msg: Hello {{ NAME }} I am from {{ village }}
-  - name: vars from file
+  - name: vars from task level
     ansible.builtin.debug:
       msg: Hello {{ NAME }} I am from {{ village }}
     vars:
       NaMe: NN
       VLG: RPM
+  - name: narsh
+    prompt: who are you
+    private: fasle
+  - name: vllg
+    prompt: where are you from?
+    private: fasle
+  - name: vars from prompt
+    ansible.builtin.debug:
+       msg: Hello {{ narsh }} I am from {{ vllg }}
