@@ -19,6 +19,7 @@
     vars:
       NaMe: NN
       VLG: RPM
+ tasks:     
   - name: narsh
     prompt: who are you
     private: fasle
