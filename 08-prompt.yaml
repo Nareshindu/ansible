@@ -4,7 +4,7 @@
   - name: naresh
     prompt: please enter the name
   - name: village
-    prompt: ramapuram
+    prompt: where are you from?
   tasks:
   - name: prompt
     ansible.builtin.debug:
