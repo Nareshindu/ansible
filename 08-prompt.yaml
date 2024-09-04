@@ -3,8 +3,10 @@
   vars_prompt:
   - name: naresh
     prompt: please enter the name
+    private: false
   - name: village
     prompt: where are you from?
+    private: false
   tasks:
   - name: prompt
     ansible.builtin.debug:
