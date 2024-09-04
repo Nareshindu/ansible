@@ -7,4 +7,4 @@
   tasks:
    - name: print the variables
      ansible.builtin.debug:
-      - msg: Hello {{ Name }} I am from {{ village }}
+      - msg: Hello {{ NAME }} I am from {{ village }}
