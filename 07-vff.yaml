@@ -1,4 +1,5 @@
 - name: Print the variables from file
+  hosts: webservers
   vars_files:
     - vars.yaml  # This is where your variables are defined
   tasks:
