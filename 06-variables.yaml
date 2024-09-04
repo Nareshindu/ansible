@@ -13,4 +13,4 @@
        NAME: NARESH
        village: RAMAPURAM
      ansible.builtin.debug:
-       - msg: Hello {{ NAME }} I am from {{ village }}
+        msg: Hello {{ NAME }} I am from {{ village }}
