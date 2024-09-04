@@ -9,8 +9,8 @@
      ansible.builtin.debug:
        msg: Hello {{ NAME }} I am from {{ village }}
    - name: print the variables from task level
-     ansible.builtin.debug:
      vars:
        NAME: NARESH
        village: RAMAPURAM
+     ansible.builtin.debug:
        - msg: Hello {{ NAME }} I am from {{ village }}
