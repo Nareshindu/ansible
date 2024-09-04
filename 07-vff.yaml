@@ -15,3 +15,9 @@
    - name: print information from inventory file
      ansible.builtin.debug:
       msg: Hello {{ NAME }} I am from {{ village }}
+   - name: print information from below variables from file level
+     ansible.builtin.include_vars:
+      file: vars.yaml
+   - name: print information from below variables from file level
+     ansible.builtin.debug:
+      msg: Hello {{ NAME }} I am from {{ village }}
