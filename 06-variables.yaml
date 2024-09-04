@@ -18,4 +18,4 @@
      vars_file:
      - vars.yaml
      ansible.builtin.debug:
-       msg: Hello {{ NAME }} I am from {{ village }}
+        msg: Hello {{ NAME }} I am from {{ village }}
