@@ -15,7 +15,8 @@
      ansible.builtin.debug:
         msg: Hello {{ NAME }} I am from {{ village }}
    - name: print the variables from file
-     vars_files:
-     - vars.yaml
+     vars_file:
+      - vars.yaml
      ansible.builtin.debug:
        msg: Hello {{ NAME }} I am from {{ village }}
+    
