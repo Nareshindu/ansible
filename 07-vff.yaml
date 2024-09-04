@@ -6,3 +6,6 @@
    - name: print the variable from file
      ansible.builtin.debug:
        msg: Hello {{ NAME }} I am from {{ village }}
+   - name: print the variable from file
+     ansible.builtin.debug:
+       msg: Hello {{ NAME }} I am from {{ village }}
