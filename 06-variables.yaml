@@ -5,7 +5,7 @@
     NAME: Naresh
     village: Ramapuram
   tasks:
-   - name: print the variables from task level
+   - name: print the variables from play level
      ansible.builtin.debug:
        msg: Hello {{ NAME }} I am from {{ village }}
    - name: print the variables from task level
@@ -14,3 +14,9 @@
        village: RAMAPURAM
      ansible.builtin.debug:
         msg: Hello {{ NAME }} I am from {{ village }}
+   - name: print the variables from file
+     vars_file:
+     - vars.yaml
+     ansible.builtin.debug:
+      msg: Hello {{ NAME }} I am from {{ village }}
+       
