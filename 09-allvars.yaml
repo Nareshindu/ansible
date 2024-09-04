@@ -16,5 +16,6 @@
     - name: print the variable from task level
        ansible.builtin.debug:
          msg: Hello {{ NAME }} I am from {{ village }}
-      NaMe: NN
-      VLG: RPM
+      vars:
+        NaMe: NN
+        VLG: RPM
