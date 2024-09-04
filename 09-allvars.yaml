@@ -9,7 +9,7 @@
       msg: Hello {{ Name }} I am from {{ village }}
   - name: second one
     ansible.builtin.include_vars:
-    file: vars.yaml
+      file: vars.yaml
   - name: vars from file
     ansible.builtin.debug:
       msg: Hello {{ Name }} I am from {{ village }}
