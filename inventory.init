@@ -4,5 +4,5 @@
 
 
 [webservers:vars]
-NAME: NaResh naidu
-village: Rmp
+NAME=NaResh naidu
+village=Rmp
