@@ -11,6 +11,6 @@
    - name: print the variables from task level
      ansible.builtin.debug:
      vars:
-      NAME: NARESH
-      village: RAMAPURAM
+       NAME: NARESH
+       village: RAMAPURAM
        - msg: Hello {{ NAME }} I am from {{ village }}
