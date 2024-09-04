@@ -4,5 +4,6 @@
     Name: naresh
     village: ramapuram
   tasks:
+  name: first one
   ansible.builtin.debug:
     msg: Hello {{ Name }} I am from {{ village }}
