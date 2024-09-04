@@ -12,6 +12,7 @@
      vars:
        NAME: NARESH
        village: RAMAPURAM
+   - name: print the vars from task level
      ansible.builtin.debug:
         msg: Hello {{ NAME }} I am from {{ village }}
    - name: print the variables from file
