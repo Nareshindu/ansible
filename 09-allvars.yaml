@@ -1,0 +1,8 @@
+- name: to know preferred args
+  hosts: webservers
+  vars:
+    Name: naresh
+    village: ramapuram
+  tasks:
+  ansible.builtin.debug:
+    msg: Hello {{ Name }} I am from {{ village }}
