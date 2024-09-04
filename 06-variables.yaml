@@ -1,0 +1,10 @@
+- name: variables
+  hosts: webservers
+  become: yes
+  vars:
+   NAME: Naresh
+   village: Ramapuram
+  tasks:
+   - name: print the variables
+     ansible.builtin.debug:
+      - msg: Hello {{ Name }} I am from {{ village }}
