@@ -11,3 +11,6 @@
   - name: prompt
     ansible.builtin.debug:
       msg: my name is {{naresh}} I am from {{village}}
+  - name: agruments
+    ansible.builtin.debug:
+      msg: my name is {{naresh}} I am from {{village}}
