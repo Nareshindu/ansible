@@ -6,9 +6,9 @@
    - name: print the variable from file
      ansible.builtin.debug:
        msg: Hello {{ NAME }} I am from {{ village }}
-    vars:
-     NAME: Naresh
-     village: Ramapuram
    - name: print the variables from play level
      ansible.builtin.debug:
        msg: Hello {{ NAME }} I am from {{ village }}
+     vars:
+      NAME: Naresh
+      village: Ramapuram
