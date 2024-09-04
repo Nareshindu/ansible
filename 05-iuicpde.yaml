@@ -1,0 +1,26 @@
+- name: Install, uninstall, copy, print and delete palybook
+  hosts: webservers
+  become: yes
+  tasks:
+   - name: ping the servers
+     ansible.builtin.ping:
+   - name: install nginx
+     ansible.builtin.package:
+       name: nginx
+       state: latest
+   - name: run the nginx
+     ansible.builtin.service:
+       name: nginx
+       state: started
+   - name: copy the file
+     ansible.builtin.copy:
+       src: /tmp/01.naresh.txt
+       dest: /opt/01.naresh.txt
+       remote_src: yes
+   - name: print message
+     ansible.builtin.debug:
+       msg: Hi Naresh
+   - name: delete a file
+     ansible.builtin.file:
+       path: /opt/01.naresh.txt
+       state: absent
