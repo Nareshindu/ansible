@@ -1,0 +1,11 @@
+- name: variables from prompt
+  hosts: webservers
+  vars_prompt:
+  - name: naresh
+    prompt: please enter the name
+  - name: village
+    prompt: ramapuram
+  tasks:
+  - name: prompt
+    ansible.builtin.debug:
+      msg: my name is {{naresh}} I am from {{village}}
