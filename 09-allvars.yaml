@@ -20,8 +20,8 @@
   - name: print the vars from task level
      ansible.builtin.debug:
         msg: Hello {{ NAME }} I am from {{ village }}
-   vars_files:
-   - vars.yaml
-   - name: print the variable from file
-     ansible.builtin.debug:
-       msg: Hello {{ NAME }} I am from {{ village }}
+    vars_files:
+    - vars.yaml
+    - name: print the variable from file
+       ansible.builtin.debug:
+         msg: Hello {{ NAME }} I am from {{ village }}
