@@ -1,4 +1,4 @@
-- name: install nginx and start
+- name: print message and install and run nginx
   host: webservers
   become: yes
   tasks:
