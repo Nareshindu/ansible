@@ -1,16 +1,13 @@
 - name: print message and install and run nginx
-  hosts: webservers
-  become: true
+  host: webservers
+  become: yes
   tasks:
-   - name: print message
-     ansible.builtin.debug:
-       msg: Hello Indu I LOVE YOU....
    - name: install nginx
-     ansible.builtin.package:
-       name: nginx
-       state: latest
-   - name: run nginx
-     ansible.builtin.service:
-       name: nginx
-       state: started
-       enabled: yes
+    ansible.builtin.package:
+      name: nginx
+      state: present
+   - name: start nginx server
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
