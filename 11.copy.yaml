@@ -1,8 +1,13 @@
-- name: copy file
-  hosts: webservers
+- name: install nginx on local machine
+  hosts: local
+  connection: local
   tasks:
-   - name: copy from tmp
-     ansible.builtin.copy:
-      src: /tmp/hello_naresh.txt
-      dest: /home/ec2-user/hello_naresh.txt
-      remote_src: yes
+   - name: install nginx
+     ansible.builtin.package:
+      name: nginx
+      state: present
+   - name: start the nginx
+     ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes    
