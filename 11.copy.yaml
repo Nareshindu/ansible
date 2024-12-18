@@ -1,14 +1,19 @@
-- name: install nginx on local machine
-  hosts: local
-  connection: local
-  become: yes
+- name: print information
+  hosts: web
   tasks:
-   - name: install nginx
-     ansible.builtin.package:
-      name: nginx
-      state: present
-   - name: start the nginx
-     ansible.builtin.service:
-      name: nginx
-      state: started
-      enabled: yes    
+   - name: print some information
+     ansible.builtin.debug:
+        msg: This is task-01 from play-01 
+   - name: print another some information
+     ansible.builtin.debug:
+        msg: This is task-02 from play-01
+- name: print play-02 information
+  hosts: web
+  tasks: 
+   - name: print play-02 information
+     ansible.builtin.debug:
+      msg: This is task-01 from play-02
+   - name: print play-02 information
+     ansible.builtin.debug:
+        msg: This is task-02 from play-02         
+        
