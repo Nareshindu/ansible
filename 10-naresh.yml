@@ -21,3 +21,6 @@
       path: /tmp/hello_naresh.txt
       state: touch
      become: yes 
+   - name: to list files
+     ansible.builtin.ls:
+       path: /tmp
