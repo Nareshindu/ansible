@@ -1,14 +1,23 @@
-- name: Install and Start Nginx
-  hosts: webservers
-  become: yes
-  tasks:
-    - name: Install Nginx
-      ansible.builtin.package:
-        name: nginx
-        state: present
+# - name: Install and Start Nginx
+#   hosts: webservers
+#   become: yes
+#   tasks:
+#     - name: Install Nginx
+#       ansible.builtin.package:
+#         name: nginx
+#         state: present
 
-    - name: Ensure Nginx is running and enabled
-      ansible.builtin.service:
-        name: nginx
-        state: started
-        enabled: yes
+#     - name: Ensure Nginx is running and enabled
+#       ansible.builtin.service:
+#         name: nginx
+#         state: started
+#         enabled: yes
+
+- name: create a empty file
+  hosts: webservers
+  tasks:
+   - name: create a file
+     ansible.builtin.file:
+      path: /tmp/hello_naresh.txt
+      state: touch
+     become: yes 
