@@ -10,4 +10,7 @@
      ansible.builtin.service:
       name: nginx
       state: started
-      enabled: yes   
+      enabled: yes
+   - name: print something
+     ansible.builtin.debug:
+      msg: I am learning devops with aws   
