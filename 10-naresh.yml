@@ -1,13 +1,14 @@
-- name: print message and install and run nginx
-  host: webservers
+- name: Install and Start Nginx
+  hosts: webservers
   become: yes
   tasks:
-  - name: install nginx
-    ansible.builtin.package:
-      name: nginx
-      state: present
-  - name: start nginx server
-    ansible.builtin.service:
-      name: nginx
-      state: started
-      enabled: yes
+    - name: Install Nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present
+
+    - name: Ensure Nginx is running and enabled
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
