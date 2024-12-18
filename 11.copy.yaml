@@ -29,6 +29,14 @@
      ansible.builtin.debug:            
         msg: This is task-03 from play-03
 
+- name: uninstall nginx
+  hosts: web
+  become: yes
+  tasks:
+   - name: uninstall nginx
+     ansible.builtin.package:
+        name: nginx
+        state: absent
 - name: install nginx
   hosts: web
   become: yes
