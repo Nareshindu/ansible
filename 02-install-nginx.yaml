@@ -16,10 +16,10 @@
   hosts: webservers
   become: yes
   tasks:
-   - name: stop nginx
-     ansible.builtin.package:
-      name: nginx
-      state: absent
+    - name: stop nginx
+      ansible.builtin.package:
+       name: nginx
+       state: absent
     # - name: uninstall nginx
     #   ansible.builtin.package:
     #     name: nginx
