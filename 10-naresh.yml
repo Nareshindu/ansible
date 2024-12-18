@@ -23,4 +23,4 @@
      become: yes 
    - name: to list files
      ansible.builtin.command:
-       path: ls -l /tmp
+       cmd: ls -l /tmp
