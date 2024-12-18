@@ -12,8 +12,19 @@
   tasks: 
    - name: print play-02 information
      ansible.builtin.debug:
-      msg: This is task-01 from play-02
+        msg: This is task-01 from play-02
    - name: print play-02 information
      ansible.builtin.debug:
-        msg: This is task-02 from play-02         
-        
+        msg: This is task-02 from play-02
+- name: print play-03 information
+  hosts: web
+  tasks:
+   - name: print information from play-03
+     ansible.builtin.debug:
+        msg: This is task-01 from play-03
+   - name: print information from play-03       
+     ansible.builtin.debug:
+        msg: This is task-02 from play-03
+   - name: print information from play-03
+     ansible.builtin:debug:            
+        msg: This is task-03 from play-03
