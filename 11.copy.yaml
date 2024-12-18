@@ -5,3 +5,4 @@
      ansible.builtin.copy:
       src: /tmp/hello_naresh.txt
       dest: /home/ec2-user/hello_naresh.txt
+      remote_src: yes
