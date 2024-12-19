@@ -1,2 +1,42 @@
-NAME: NaResh naidu
-village: Rmp
+- name: print information
+  hosts: web
+  become: yes
+  tasks:
+   - name: play-01
+     ansible.builtin.debug:
+      msg: This is task-01 from play-01
+   - name: play-01
+     ansible.builtin.debug:
+      msg: This is task-02 from play-01
+   - name: play-01
+     ansible.builtin.debug:
+      msg: This is task-03 from play-01
+- name: install nginx
+  hosts: web
+  become: yes
+  tasks:
+   - name: install nginx
+     ansible.builtin.package:
+      name: nginx
+      state: present
+   - name: run nginx
+     ansible.builtin.service:
+      name: nginx
+      state: started
+- name: create a file
+  hosts: web
+  become: yes
+  tasks:
+   - name: create a empty file
+     ansible.builtin.file:
+      path: /tmp/hello.txt
+      state: touch    
+- name: copy files
+  hosts: web
+  become: yes
+  tasks:
+   - name: copy files from remote server
+     ansible.builtin.copy:
+      src: /tmp/hello.txt
+      dest: /home/naresh/hello.txt       
+      remote_src: yes
