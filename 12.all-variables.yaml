@@ -29,7 +29,7 @@
   hosts: web
   vars_prompt:
   - name: naresh
-    prompt: please enter 
+    prompt: please enter your naresh
     private: false      
   tasks:
     msg: I am from {{naresh}}  
