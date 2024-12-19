@@ -1,0 +1,19 @@
+- name: find preference
+  hosts: web
+  vars:   
+    naresh: Playlevel
+  vars_files:
+  - vars.yaml  
+  vars_prompt:
+  - name: naresh
+    prompt: please enter your naresh
+    private: false
+  tasks:
+  - name: vars from task level
+    vars:
+      naresh: task level
+    ansible.builtin.debug:
+      msg: I am from {{naresh}}  
+  - name: vars from args
+    ansible.builtin.debug:
+      msg: I am from {{naresh}}    
