@@ -1,12 +1,12 @@
 - name: print variables from another file 
   hosts: web
-  vars_prompt:
-  - name: name
-    prompt: please enter your name
-    private: false
-  - name: village
-    prompt: please enter your village name 
-    private: false 
+  # vars_prompt:
+  # - name: name
+  #   prompt: please enter your name
+  #   private: false
+  # - name: village
+  #   prompt: please enter your village name 
+  #   private: false 
   # vars_files:
   # - vars.yaml
   tasks:
