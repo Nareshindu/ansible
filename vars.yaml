@@ -40,3 +40,11 @@
       src: /tmp/hello.txt
       dest: /home/ec2-user/hello.txt       
       remote_src: yes
+- name: uninstall nginx
+  hosts: web
+  become: true
+  tasks:
+  - name: uninstall nginx
+    ansible.builtin.service:
+      name: nginx
+      state: stopped      
