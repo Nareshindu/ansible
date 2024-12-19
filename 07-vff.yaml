@@ -3,7 +3,7 @@
   vars_prompt:
   - name: name
     prompt: please enter your name
-    privte: false
+    private: false
   - name: village
     prompt: please enter your village name 
     private: false 
