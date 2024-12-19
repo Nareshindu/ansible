@@ -41,9 +41,9 @@
   - name: variables from inventory
     ansible.builtin.debug:
       msg: I am from {{naresh}}    
-- name: vars from cli
-  hosts: web
-  tasks: 
-  - name: variables from CLI
-    ansible.builtin.debug:
-      msg: I am from {{naresh}}      
+# - name: vars from cli
+#   hosts: web
+#   tasks: 
+#   - name: variables from CLI
+#     ansible.builtin.debug:
+#       msg: I am from {{naresh}}      
