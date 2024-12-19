@@ -10,8 +10,8 @@
     private: false
   tasks:
   - name: vars from task level
-    vars:
-      naresh: task level
+    # vars:
+    #   naresh: task level
     ansible.builtin.debug:
       msg: I am from {{naresh}}  
   # - name: vars from args
