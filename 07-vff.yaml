@@ -3,8 +3,10 @@
   vars_prompt:
   - name: name
     prompt: please enter your name
+    privte: false
   - name: village
-    prompt: please enter your village name  
+    prompt: please enter your village name 
+    private: false 
   # vars_files:
   # - vars.yaml
   tasks:
