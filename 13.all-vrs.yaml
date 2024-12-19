@@ -4,10 +4,10 @@
     naresh: Playlevel
   # vars_files:
   # - vars.yaml  
-  vars_prompt:
-  - name: naresh
-    prompt: please enter your naresh
-    private: false
+  # vars_prompt:
+  # - name: naresh
+  #   prompt: please enter your naresh
+  #   private: false
   tasks:
   - name: vars from task level
     # vars:
