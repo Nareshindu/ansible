@@ -23,4 +23,4 @@
     #   NAME: naresh
     #   village: ramapuram
     ansible.builtin.debug:
-      msg: my name is {{NAME}} and i came from {{COUSRE}} 
+      msg: my name is {{NAME}} and i came from {{COURSE}} 
