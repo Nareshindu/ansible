@@ -1,7 +1,7 @@
 - name: find preference
   hosts: web
-  vars:   
-    naresh: Playlevel
+  # vars:   
+  #   naresh: Playlevel
   # vars_files:
   # - vars.yaml  
   # vars_prompt:

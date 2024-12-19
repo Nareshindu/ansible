@@ -28,4 +28,5 @@ preferences
 2) Task level
 3) vars from file
 4) vars from prompt
-5) 
+5) vars from Play level
+6) 
