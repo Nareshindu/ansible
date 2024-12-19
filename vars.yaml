@@ -38,5 +38,5 @@
    - name: copy files from remote server
      ansible.builtin.copy:
       src: /tmp/hello.txt
-      dest: /home/naresh/hello.txt       
+      dest: /home/ec2-user/hello.txt       
       remote_src: yes
