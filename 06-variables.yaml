@@ -10,6 +10,10 @@
       msg: I am learning {{NAME}} also {{COURSE}} and the duration is {{DURATION}} 
 - name: print something
   hosts: web
+  vars:
+    NAME: naresh
+    COURSE: ansible-devops
+    DURATION: 10hrs
   tasks:
   - name: print data
     ansible.builtin.debug:
