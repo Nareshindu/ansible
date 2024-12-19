@@ -1,23 +1,16 @@
-- name: variables
-  hosts: webservers
-  become: yes
+- name: using variables to print some data
+  hosts: web
   vars:
-    NAME: Naresh
-    village: Ramapuram
+    NAME: devops
+    COURSE: ansible
+    DURATION: 10hrs
   tasks:
-   - name: print the variables from play level
-     ansible.builtin.debug:
-       msg: Hello {{ NAME }} I am from {{ village }}
-   - name: print the variables from task level
-     vars:
-       NAME: NARESH
-       village: RAMAPURAM
-   - name: print the vars from task level
-     ansible.builtin.debug:
-        msg: Hello {{ NAME }} I am from {{ village }}
-   - name: print the variables from file
-     ansible.builtin.include_vars:
-      file: vars.yaml
-   - name: print the variables from play level
-     ansible.builtin.debug:
-       msg: Hello {{ NAME }} I am from {{ village }}
+  - name: print some data
+    ansible.builtin.debug:
+      msg: I am learning {{NAME}} also {{COURSE}} and the duration is {{DURATION}} 
+- name: print something
+  hosts: web
+  tasks:
+  - name: print data
+    ansible.builtin.debug:
+      msg: we are learning {{NAME}} also {{COURSE}} and the duration is {{DURATION}}
