@@ -14,6 +14,6 @@
       naresh: task level
     ansible.builtin.debug:
       msg: I am from {{naresh}}  
-  - name: vars from args
-    ansible.builtin.debug:
-      msg: I am from {{naresh}}    
+  # - name: vars from args
+  #   ansible.builtin.debug:
+  #     msg: I am from {{naresh}}    
