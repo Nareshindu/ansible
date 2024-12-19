@@ -32,7 +32,9 @@
     prompt: please enter your naresh
     private: false      
   tasks:
-    msg: I am from {{naresh}}  
+  - name: variables from prompt
+    ansible.builtin.debug:
+      msg: I am from {{naresh}}  
 - name: vars from inventory
   hosts: web
   tasks:
