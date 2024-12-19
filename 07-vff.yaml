@@ -1,7 +1,12 @@
 - name: print variables from another file 
   hosts: web
-  vars_files:
-  - vars.yaml
+  vars_prompt:
+  - name: name
+    prompt: please enter your name
+  - name: village
+    prompt: please enter your village name  
+  # vars_files:
+  # - vars.yaml
   tasks:
   - name: print data 
     ansible.builtin.debug:
