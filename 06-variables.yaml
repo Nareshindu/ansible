@@ -18,3 +18,9 @@
   - name: print data
     ansible.builtin.debug:
       msg: we are learning {{NAME}} also {{COURSE}} and the duration is {{DURATION}}
+  - name: print information
+    vars: 
+      NAME: naresh
+      village: ramapuram
+    ansible.builtin.debug:
+      msg: my name is {{NAME}} and i came from {{village}} 
