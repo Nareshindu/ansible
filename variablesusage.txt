@@ -29,4 +29,4 @@ preferences
 3) vars from file
 4) vars from prompt
 5) vars from Play level
-6) 
+6) vars from inventory
