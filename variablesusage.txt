@@ -20,4 +20,4 @@ USAGE OF VARIABLES=>
     - name:
       prompt:
 5. variables from inventory: If we give variables via from inventory it will take automatically
-6. variables from CLI:           
+6. variables from CLI: when we will give variables through CLI we have to use --extra-vars or -e "variable name=value variable name=value"

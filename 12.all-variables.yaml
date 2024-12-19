@@ -1,0 +1,47 @@
+# Play level variables
+# Task level variables
+# variables from file
+# vars from prompt
+# variables from inventory
+# variables from CLI
+- name: find the first preference
+  hosts: web
+  vars:   
+    from: Playlevel
+  tasks:
+  - name: playlevel variables
+    ansible.builtin.debug:
+      msg: I am from {{from}}
+  - name: tasklevel variables
+    vars:
+      from: Tasklevel
+    ansible.builtin.debug:
+      msg: I am from {{from}}
+- name: vars from another file
+  hosts: web
+  vars_files:
+  - vars.yaml
+  tasks:
+  - name: Variables from another file
+    ansible.builtin.debug:
+      msg: I am from {{from}}
+- name: variables from prompt
+  hosts: web
+  vars_prompt:
+  - name: from
+    prompt: please enter 
+    private: false      
+  tasks:
+    msg: I am from {{from}}  
+- name: vars from inventory
+  hosts: web
+  tasks:
+  - name: variables from inventory
+    ansible.builtin.debug:
+      msg: I am from {{from}}    
+- name: vars from cli
+  hosts: web
+  tasks: 
+  - name: variables from CLI
+    ansible.builtin.debug:
+      msg: I am from {{from}}      
