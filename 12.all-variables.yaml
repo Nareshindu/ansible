@@ -7,16 +7,16 @@
 - name: find the first preference
   hosts: web
   vars:   
-    from: Playlevel
+    naresh: Playlevel
   tasks:
   - name: playlevel variables
     ansible.builtin.debug:
-      msg: I am from {{from}}
+      msg: I am from {{naresh}}
   - name: tasklevel variables
     vars:
-      from: Tasklevel
+      naresh: Tasklevel
     ansible.builtin.debug:
-      msg: I am from {{from}}
+      msg: I am from {{naresh}}
 - name: vars from another file
   hosts: web
   vars_files:
@@ -24,24 +24,24 @@
   tasks:
   - name: Variables from another file
     ansible.builtin.debug:
-      msg: I am from {{from}}
+      msg: I am from {{naresh}}
 - name: variables from prompt
   hosts: web
   vars_prompt:
-  - name: from
+  - name: naresh
     prompt: please enter 
     private: false      
   tasks:
-    msg: I am from {{from}}  
+    msg: I am from {{naresh}}  
 - name: vars from inventory
   hosts: web
   tasks:
   - name: variables from inventory
     ansible.builtin.debug:
-      msg: I am from {{from}}    
+      msg: I am from {{naresh}}    
 - name: vars from cli
   hosts: web
   tasks: 
   - name: variables from CLI
     ansible.builtin.debug:
-      msg: I am from {{from}}      
+      msg: I am from {{naresh}}      
