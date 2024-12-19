@@ -26,4 +26,5 @@ USAGE OF VARIABLES=>
 preferences
 1) CLI ARGS
 2) Task level
-3) 
+3) VARIABLES from file
+4) 
