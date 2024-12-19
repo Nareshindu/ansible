@@ -1,0 +1,9 @@
+- name: print devops nformation
+  hosts: localhost
+  connection: local
+  vars_files:
+  - vars.yaml
+  tasks:
+  - name: print given data
+    ansible.builtin.debug:
+      msg: I am learning {{course}}, duration is {{duration}}, and topics are {{topics}}, and this is {{live}}, explaination below {{devops}}.

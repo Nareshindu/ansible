@@ -1,1 +1,16 @@
 naresh: Variables from another file
+
+course: DevOps with AWS
+duration: 120hrs
+topics:
+- linux
+- shell scripting
+- ansible
+- terraform
+- docker
+- k8s
+live: true
+devops:
+  ci: jenkins
+  cmt: ansible
+  container: docker and k8s
