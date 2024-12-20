@@ -23,17 +23,28 @@
 #     ansible.builtin.debug:
 #       msg: I am learning {{course}}, duration is {{duration}}, and topics are {{topics}}, and live is {{live}}, explaination below {{devops}}.
 
+# - name: compare two numbers
+#   hosts: localhost
+#   connection: local
+#   vars:
+#   - naresh: 16
+#   tasks:
+#   - name: given number is less than 15
+#     ansible.builtin.debug:
+#       msg: given number {{naresh}} is less than 15
+#     when: naresh  < 15
+#   - name: given number is greater than 15
+#     ansible.builtin.debug:
+#       msg: given number {{naresh}} is greater than 15
+#     when: naresh > 15    
 - name: compare two numbers
   hosts: localhost
   connection: local
-  vars:
-  - naresh: 16
-  tasks:
-  - name: given number is less than 15
+  vars_prompt:
+  - name: naresh
+    prompt: please enter naresh
+  tasks: 
+  - name: compare two numbers
     ansible.builtin.debug:
-      msg: given number {{naresh}} is less than 15
-    when: naresh  < 15
-  - name: given number is greater than 15
-    ansible.builtin.debug:
-      msg: given number {{naresh}} is greater than 15
-    when: naresh > 15    
+      msg: given number {{naresh}} is greater than 10
+    when: naresh > 10   
