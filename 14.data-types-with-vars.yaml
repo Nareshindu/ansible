@@ -27,7 +27,7 @@
   hosts: localhost
   connection: local
   vars:
-  - naresh: 50
+  - naresh: 15
   tasks:
   - name: given number is less than or equal 15
     ansible.builtin.debug:
