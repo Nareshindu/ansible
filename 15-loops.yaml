@@ -42,6 +42,11 @@
       name: nginx
       state: present
     when: naresh.rc != 0
+  - name: enable nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
 
 # - name: check user data
 #   hosts: localhost
