@@ -1,6 +1,7 @@
 - name: print four persons info
   hosts: localhost
   connection: local
+  become: true
   tasks:
   - name: print persons info
     ansible.builtin.package:
