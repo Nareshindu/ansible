@@ -44,7 +44,7 @@
 
 - name: check user data
   hosts: localhost
-  connection: yes
+  connection: local
   become: yes
   tasks:
   - name: check user info
