@@ -49,10 +49,10 @@
   tasks:
   - name: check user info
     ansible.builtin.command: id nareshnaidu
-    register: naresh
+    register: USER
   - name: print user info
     ansble.builtin.debug:
-      msg: "user info {{ naresh }}"
+      msg: "user info {{ USER }}"
   - name: create a user
     ansible.builtin.command: useradd nareshnaidu
-    when: naresh.rc != 0
+    when: USER.rc != 0
