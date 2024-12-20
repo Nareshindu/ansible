@@ -50,6 +50,7 @@
   - name: check user info
     ansible.builtin.command: id nareshnaidu
     register: naresh
+    ignore_errors: yes
   - name: print user info
     ansible.builtin.debug:
       msg: user info "{{ naresh }}"
