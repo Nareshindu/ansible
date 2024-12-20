@@ -1,14 +1,26 @@
-- name: print four persons info
+# - name: print four persons info
+#   hosts: localhost
+#   connection: local
+#   become: true
+#   tasks:
+#   - name: print persons info
+#     ansible.builtin.package:
+#       name: "{{ item }}"
+#       state: present
+#     loop:
+#     - nginx
+#     - git
+#     - ansible
+#     - pgadmin4
+
+- name: uninstall nginx
   hosts: localhost
   connection: local
-  become: true
-  tasks:
-  - name: print persons info
+  become: yes
+  tasks: 
+  - name: uninstall nginx
     ansible.builtin.package:
       name: "{{ item }}"
-      state: present
+      state: absent
     loop:
     - nginx
-    - git
-    - ansible
-    - pgadmin4
