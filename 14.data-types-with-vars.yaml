@@ -1,24 +1,35 @@
-- name: print devops nformation
+# - name: print devops nformation
+#   hosts: localhost
+#   connection: local
+#   vars:
+#   - course: DevOps with AWS
+#     duration: 120HRS
+#     topics:
+#       - Linux
+#       - Shell
+#       - Ansible
+#       - Terraform
+#       - Docker
+#       - k8s
+#     devops:
+#       ci: jenkins
+#       containers:
+#         - docker
+#         - k8s
+#       cmt: ansible
+#     live: true  
+#   tasks:
+#   - name: print given data
+#     ansible.builtin.debug:
+#       msg: I am learning {{course}}, duration is {{duration}}, and topics are {{topics}}, and live is {{live}}, explaination below {{devops}}.
+
+- name: compare two numbers
   hosts: localhost
   connection: local
   vars:
-  - course: DevOps with AWS
-    duration: 120HRS
-    topics:
-      - Linux
-      - Shell
-      - Ansible
-      - Terraform
-      - Docker
-      - k8s
-    devops:
-      ci: jenkins
-      containers:
-        - docker
-        - k8s
-      cmt: ansible
-    live: true  
+  - naresh: 50
   tasks:
-  - name: print given data
+  - name: given number is less than or equal
     ansible.builtin.debug:
-      msg: I am learning {{course}}, duration is {{duration}}, and topics are {{topics}}, and live is {{live}}, explaination below {{devops}}.
+      msg: 
+    when: {{naresh}}  <= 15
