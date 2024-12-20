@@ -29,7 +29,7 @@
   vars:
   - naresh: 50
   tasks:
-  - name: given number is less than or equal
+  - name: given number is less than or equal 15
     ansible.builtin.debug:
-      msg: 
+      msg: given number {{naresh}} is less than or equal 15
     when: naresh  <= 15
