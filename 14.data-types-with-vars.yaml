@@ -17,6 +17,7 @@
         - docker
         - k8s
       cmt: ansible
+    live: true  
   tasks:
   - name: print given data
     ansible.builtin.debug:
