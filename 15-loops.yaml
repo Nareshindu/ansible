@@ -33,6 +33,7 @@
   - name: check nginx is installed or not
     ansible.builtin.command: nginx -v
     register: naresh
+    ignore_errors: true
   - name: print nginx info
     ansible.builtin.debug:
       msg: "nginx info: {{ naresh }}"
