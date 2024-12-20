@@ -1,17 +1,17 @@
-# - name: print four persons info
-#   hosts: localhost
-#   connection: local
-#   become: true
-#   tasks:
-#   - name: print persons info
-#     ansible.builtin.package:
-#       name: "{{ item }}"
-#       state: present
-#     loop:
-#     - nginx
-#     - git
-#     - ansible
-#     - pgadmin4
+- name: print four persons info
+  hosts: localhost
+  connection: local
+  become: true
+  tasks:
+  - name: print persons info
+    ansible.builtin.package:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop:
+    - { name: nginx, state: absent }
+    - { name: git, state: present }
+    - { name: ansible, state: present}
+    - { name: httpd, state: present}
 
 # - name: uninstall nginx
 #   hosts: localhost
@@ -25,28 +25,28 @@
 #     loop:
 #     - nginx
 
-- name: uninstall nginx
-  hosts: localhost
-  connection: local
-  become: yes
-  tasks: 
-  - name: check nginx is installed or not
-    ansible.builtin.command: nginx -v
-    register: naresh
-    ignore_errors: true
-  - name: print nginx info
-    ansible.builtin.debug:
-      msg: "nginx info: {{ naresh }}"
-  - name: install nginx
-    ansible.builtin.package:    
-      name: nginx
-      state: present
-    when: naresh.rc != 0
-  - name: enable nginx
-    ansible.builtin.service:
-      name: nginx
-      state: started
-      enabled: yes
+# - name: uninstall nginx
+#   hosts: localhost
+#   connection: local
+#   become: yes
+#   tasks: 
+#   - name: check nginx is installed or not
+#     ansible.builtin.command: nginx -v
+#     register: naresh
+#     ignore_errors: true
+#   - name: print nginx info
+#     ansible.builtin.debug:
+#       msg: "nginx info: {{ naresh }}"
+#   - name: install nginx
+#     ansible.builtin.package:    
+#       name: nginx
+#       state: present
+#     when: naresh.rc != 0
+#   - name: enable nginx
+#     ansible.builtin.service:
+#       name: nginx
+#       state: started
+#       enabled: yes
 
 # - name: check user data
 #   hosts: localhost
