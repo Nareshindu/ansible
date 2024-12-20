@@ -32,4 +32,4 @@
   - name: given number is less than or equal
     ansible.builtin.debug:
       msg: 
-    when: {{naresh}}  <= 15
+    when: naresh  <= 15
