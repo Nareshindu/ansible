@@ -25,19 +25,34 @@
 #     loop:
 #     - nginx
 
-- name: uninstall nginx
+# - name: uninstall nginx
+#   hosts: localhost
+#   connection: local
+#   become: yes
+#   tasks: 
+#   - name: check nginx is installed or not
+#     ansible.builtin.command: nginx -v
+#     register: naresh
+#   - name: print nginx info
+#     ansible.builtin.debug:
+#       msg: "nginx info: {{ naresh }}"
+#   - name: install nginx
+#     ansible.builtin.package:    
+#       name: nginx
+#       state: present
+#     when: naresh.rc != 0
+
+- name: check user data
   hosts: localhost
-  connection: local
+  connection: yes
   become: yes
-  tasks: 
-  - name: check nginx is installed or not
-    ansible.builtin.command: nginx -v
-    register: naresh
-  - name: print nginx info
-    ansible.builtin.debug:
-      msg: "nginx info: {{ naresh }}"
-  - name: install nginx
-    ansible.builtin.package:    
-      name: nginx
-      state: present
+  tasks:
+  - name: check user info
+    ansible.biultin.command: id nareshnaidu
+    regiister: naresh
+  - name: print user info
+    ansble.builtin.debug:
+      msg: "user info {{ naresh }}"
+  - name: create a user
+    ansible.builtin.command: useradd nareshnaidu
     when: naresh.rc != 0
