@@ -52,7 +52,7 @@
     register: USER
   - name: print user info
     ansble.builtin.debug:
-      msg: "user info {{ USER }}"
+      msg: "user info: {{ USER }}"
   - name: create a user
     ansible.builtin.command: useradd nareshnaidu
     when: USER.rc != 0
