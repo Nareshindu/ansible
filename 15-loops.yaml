@@ -48,7 +48,7 @@
   become: yes
   tasks:
   - name: check user info
-    ansible.biultin.command: id nareshnaidu
+    ansible.builtin.command: id nareshnaidu
     register: naresh
   - name: print user info
     ansble.builtin.debug:
