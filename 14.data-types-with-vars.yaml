@@ -36,4 +36,4 @@
   - name: given number is greater than or equal to 15
     ansible.builtin.debug:
       msg: given number {{naresh}} is greater than or equal to 15
-    when: naresh => 15    
+    when: naresh >= 15    
