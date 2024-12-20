@@ -43,8 +43,9 @@
   vars_prompt:
   - name: naresh
     prompt: please enter naresh
+    private: false
   tasks: 
   - name: compare two numbers
     ansible.builtin.debug:
       msg: given number {{naresh}} is greater than 10
-    when: naresh > 10   
+    when: naresh | int > 10   
