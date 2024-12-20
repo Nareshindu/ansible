@@ -16,7 +16,7 @@
 - name: uninstall nginx
   hosts: localhost
   connection: local
-  become: yes
+  become: yesl
   tasks: 
   - name: uninstall nginx
     ansible.builtin.package:
