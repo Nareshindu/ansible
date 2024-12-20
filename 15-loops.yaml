@@ -35,7 +35,7 @@
     register: naresh
   - name: print nginx info
     ansible.builtin.debug:
-      msg: nginx info: {{naresh}}
+      msg: nginx info: "{{ naresh }}"
   # - name: install nginx
   #   ansible.builtin.package:    
   #     name: nginx
