@@ -1,0 +1,12 @@
+- name: print four persons info
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: print persons info
+    ansible.builtin.debug:
+      msg: The persons are {{item}}
+    loop:
+    - naresh
+    - santhosh
+    - sai
+    - nandu  
