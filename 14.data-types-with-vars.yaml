@@ -1,8 +1,22 @@
 - name: print devops nformation
   hosts: localhost
   connection: local
-  vars_files:
-  - vars.yaml
+  vars:
+  - course: DevOps with AWS
+    duration: 120HRS
+    topics:
+      - Linux
+      - Shell
+      - Ansible
+      - Terraform
+      - Docker
+      - k8s
+    devops:
+      ci: jenkins
+      containers:
+        - docker
+        - k8s
+      
   tasks:
   - name: print given data
     ansible.builtin.debug:
