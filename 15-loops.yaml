@@ -49,7 +49,7 @@
   tasks:
   - name: check user info
     ansible.biultin.command: id nareshnaidu
-    regiister: naresh
+    register: naresh
   - name: print user info
     ansble.builtin.debug:
       msg: "user info {{ naresh }}"
