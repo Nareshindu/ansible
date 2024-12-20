@@ -13,14 +13,31 @@
 #     - ansible
 #     - pgadmin4
 
+# - name: uninstall nginx
+#   hosts: localhost
+#   connection: local
+#   become: yes
+#   tasks: 
+#   - name: uninstall nginx
+#     ansible.builtin.package:
+#       name: "{{ item }}"
+#       state: absent
+#     loop:
+#     - nginx
+
 - name: uninstall nginx
   hosts: localhost
   connection: local
   become: yes
   tasks: 
-  - name: uninstall nginx
-    ansible.builtin.package:
-      name: "{{ item }}"
-      state: absent
-    loop:
-    - nginx
+  - name: check nginx is installed or not
+    ansible.builtin.command: nginx -v
+    register: naresh
+  - name: print nginx info
+    ansible.builtin.debug:
+      msg: nginx info: {{naresh}}
+  # - name: install nginx
+  #   ansible.builtin.package:    
+  #     name: nginx
+  #     state: present
+  #   when:   
