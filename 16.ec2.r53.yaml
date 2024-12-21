@@ -1,5 +1,5 @@
 - name: create 3 instances
-  hosts: local
+  hosts: localhost
   connection: local
   vars:
     sg_id: sg-07bc108ee968475d5
