@@ -1,0 +1,23 @@
+- name: create 3 instances
+  hosts: local
+  connection: local
+  vars:
+    sg_id: sg-07bc108ee968475d5
+    image_id: ami-09c813fb71547fc4f
+    vpc_id: subnet-07bf150db76d1a830
+  tasks:
+  - name: create ec2 instances
+    amazon.aws.ec2_instances:
+      name: "{{ item }}"
+      instance_type: t2.micro
+      security_group: "{{ sg_id }}"
+      vpc_subnet_id: "{{ vpc_id }}"
+      image_id: "{{ image_id}}"
+    loop:
+    - mysql
+    - backend
+    - frontend
+    register: instance
+  - name: print instances data
+    ansible.builtin.debug:
+      msg: "{{ instance }}"  
