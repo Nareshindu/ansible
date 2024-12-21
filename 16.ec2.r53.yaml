@@ -6,6 +6,12 @@
     image_id: ami-09c813fb71547fc4f
     vpc_id: subnet-07bf150db76d1a830
   tasks:
+  - name: ansible to install boto3 and botocore
+    ansible.builtin.pip:
+      name:
+      - boto3
+      - botocore
+      executable: pip3.9
   - name: create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
