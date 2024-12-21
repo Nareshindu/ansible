@@ -5,6 +5,7 @@
     sg_id: sg-07bc108ee968475d5
     image_id: ami-09c813fb71547fc4f
     vpc_id: subnet-07bf150db76d1a830
+    zone_id: nareshtransportservices.online 
   tasks:
   - name: ansible to install boto3 and botocore
     ansible.builtin.pip:
@@ -27,3 +28,14 @@
   - name: print instances data
     ansible.builtin.debug:
       msg: "{{ instance }}"  
+
+  - name: create r53 records
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone_id }}"
+      record: "{{ item.name.zone_id }}"
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].private_ip_address }}"
+      wait: true
+    loop: "{{ instance.results }}"  
