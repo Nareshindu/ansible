@@ -7,7 +7,7 @@
     vpc_id: subnet-07bf150db76d1a830
   tasks:
   - name: create ec2 instances
-    amazon.aws.ec2_instances:
+    amazon.aws.ec2_instance:
       name: "{{ item }}"
       instance_type: t2.micro
       security_group: "{{ sg_id }}"
