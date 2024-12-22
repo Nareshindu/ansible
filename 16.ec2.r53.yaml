@@ -52,4 +52,4 @@
       ttl: 1
       value: "{{ item.instance[0].public_ip_address }}"
     loop: "{{ instance.results }}"
-    when: item.item == frontend
+    when: item.item == "frontend"
