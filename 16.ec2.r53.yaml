@@ -51,4 +51,5 @@
       type: A
       ttl: 1
       value: "{{ item.instance[0].public_ip_address }}"
-      loop: item.item == frontend
+    loop: "{{ instance.results }}"
+    when: item.item == frontend
