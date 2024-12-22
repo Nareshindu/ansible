@@ -50,6 +50,6 @@
       record: "{{ zone_id }}"
       type: A
       ttl: 1
-      value: "{{ item.instance[0].public_ip_address }}"
+      value: "{{ item.instances[0].public_ip_address }}"
     loop: "{{ instance.results }}"
     when: item.item == "frontend"
